@@ -24,3 +24,18 @@ It supports multiple languages (Java, Python, C#, JavaScript) and browsers (Chro
     <artifactId>selenium-java</artifactId>
     <version>4.21.0</version>
 </dependency>
+Download the browser driver (e.g., ChromeDriver) or use WebDriverManager
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FirstTest {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+        System.out.println(driver.getTitle());
+        driver.quit();
+    }
+}
+Always call driver.quit() to close the browser and release resources
+driver.close() closes only the current window/tab
