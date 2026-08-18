@@ -32,3 +32,13 @@ driver.switchTo().window(parentWindow);
 driver.switchTo().frame("frameName");
 driver.switchTo().frame(0); // by index
 driver.switchTo().defaultContent(); // exit frame
+
+5. Handling Alerts/Popups
+Alert alert = driver.switchTo().alert();
+alert.accept();
+alert.dismiss();
+alert.getText();
+
+6. Common Issues
+Forgetting to switch back to defaultContent() after working inside a frame
+Not switching to the correct window handle before interacting with a new tab
